@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="line_color">#226DDD</color>
+    <color name="login_setting_deep">#228b22</color>
+    <color name="login_setting_light">#9bcd9b</color>
+    <color name="bag">#4fa5d5</color>
+    <color name="yan">#E3E6dE</color>
+    <color name="beijing">#FAFAFA</color>
+    <color name="ba">#FFFFFF</color>
+    <color name="k">#EFEFF0</color>
+    <color name="chartitle">#F4FFFF</color>
+    <color name="alldata">#F0F0F0</color>
+    <color name="xian">#E0DFDE</color>
+    <color name="tou">#acFFFFFF</color>
+    <color name="t">#99FFFFFF</color>
+    <color name="navi">#EE323231</color>
+    <color name="tiao">#9a9e97</color>
+    <color name="se">#FF9C00</color>
+    <color name="titlecolor">#FF8533</color>
+    <color name="daohang">#65E4FF</color>
+
+</resources>

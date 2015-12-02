@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="CommitPrefEdits">
+        <ignore path="src/com/lr/fragment/SetFragment.java" />
+    </issue>
+    <issue id="ContentDescription">
+        <ignore path="res/layout/dcy.xml" />
+        <ignore path="res/layout/dvc.xml" />
+        <ignore path="res/layout/relcontent.xml" />
+    </issue>
+    <issue id="CutPasteId">
+        <ignore path="src/com/lr/fragment/SetFragment.java" />
+    </issue>
+    <issue id="HandlerLeak" severity="ignore">
+        <ignore path="src/com/lr/animalhusbandry/MessageActivety.java" />
+    </issue>
+    <issue id="HardcodedText">
+        <ignore path="res/layout/activity_main.xml" />
+        <ignore path="res/layout/contentchar.xml" />
+        <ignore path="res/layout/dbmessage.xml" />
+        <ignore path="res/layout/dcy.xml" />
+        <ignore path="res/layout/dvc.xml" />
+        <ignore path="res/layout/listmessage.xml" />
+        <ignore path="res/layout/logi.xml" />
+        <ignore path="res/layout/monicontent.xml" />
+        <ignore path="res/layout/relcontent.xml" />
+        <ignore path="res/layout/setvalue.xml" />
+        <ignore path="res/layout/wendu.xml" />
+    </issue>
+    <issue id="MangledCRLF">
+        <ignore path="res/layout/listmessage.xml" />
+    </issue>
+    <issue id="MissingPrefix">
+        <ignore path="res/layout/listchar.xml" />
+        <ignore path="res/layout/monit.xml" />
+        <ignore path="res/layout/reldata.xml" />
+    </issue>
+    <issue id="NestedWeights">
+        <ignore path="res/layout/logi.xml" />
+    </issue>
+    <issue id="NewApi" severity="ignore">
+        <ignore path="res/drawable/check.xml" />
+        <ignore path="res/drawable/settextcolor.xml" />
+        <ignore path="res/layout/activity_main.xml" />
+        <ignore path="res/layout/data.xml" />
+        <ignore path="res/layout/monicontent.xml" />
+        <ignore path="res/layout/relcontent.xml" />
+    </issue>
+    <issue id="Orientation" severity="ignore">
+        <ignore path="res/layout/data.xml" />
+        <ignore path="res/layout/monicontent.xml" />
+        <ignore path="res/layout/monit.xml" />
+    </issue>
+    <issue id="ProtectedPermissions">
+        <ignore path="AndroidManifest.xml" />
+    </issue>
+    <issue id="ResourceAsColor" severity="ignore" />
+    <issue id="ScrollViewSize">
+        <ignore path="res/layout/monit.xml" />
+        <ignore path="res/layout/shiping.xml" />
+    </issue>
+    <issue id="ShowToast">
+        <ignore path="src/com/lr/fragment/SetFragment.java" />
+    </issue>
+    <issue id="SimpleDateFormat">
+        <ignore path="src/com/bean/ToSoA.java" />
+        <ignore path="src/com/lr/fragment/HistoryData.java" />
+    </issue>
+    <issue id="SpUsage" severity="ignore">
+        <ignore path="res/layout/activity_main.xml" />
+        <ignore path="res/layout/listmessage.xml" />
+        <ignore path="res/layout/relcontent.xml" />
+    </issue>
+    <issue id="Suspicious0dp">
+        <ignore path="res/layout/contentchar.xml" />
+        <ignore path="res/layout/dcy.xml" />
+        <ignore path="res/layout/setvalue.xml" />
+    </issue>
+    <issue id="UseSparseArrays" severity="ignore">
+        <ignore path="src/com/lr/fragment/RelData.java" />
+    </issue>
+    <issue id="UselessLeaf">
+        <ignore path="res/layout/data.xml" />
+        <ignore path="res/layout/setvalue.xml" />
+    </issue>
+    <issue id="UselessParent">
+        <ignore path="res/layout/activity_main.xml" />
+    </issue>
+</lint>

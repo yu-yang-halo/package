@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/check"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/background_corners1"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/relData"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/daohang"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="实时数据"
+            android:textColor="@color/coselect" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/historyData"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/daohang"
+            android:button="@null"
+            android:gravity="center"
+            android:text="历史数据"
+            android:textColor="@color/coselect" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/internet"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:drawableRight="@drawable/item_right"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="生活中最疼苦的事就是网没了。检查设置"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

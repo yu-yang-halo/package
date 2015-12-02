@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item><shape>
+
+            <!-- 填充, <solid android:color="#F5F5F5" />指定填充的颜色 -->
+            <!-- 描边 -->
+            <stroke android:width="2.0dip" android:color="#dcdcdc" />
+            <!-- 圆角 -->
+            <corners android:bottomLeftRadius="5dp" android:bottomRightRadius="5dp" android:topLeftRadius="5dp" android:topRightRadius="5dp" />
+        </shape></item>
+
+</selector>

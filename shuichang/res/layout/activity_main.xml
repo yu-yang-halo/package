@@ -1,0 +1,157 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/data_data_1" >
+
+    <LinearLayout
+        android:id="@+id/h"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/holo_blue_light"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/back"
+            android:text="返回"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="乐然农业物联网"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/home_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ho"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <com.util.Myviewpage
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll"
+        android:layout_below="@+id/h" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/navi"
+        android:gravity="center" >
+
+        <RadioGroup
+            android:id="@+id/rd"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/data"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/checktwoone"
+                android:button="@null"
+                android:checked="true"
+                android:drawablePadding="-6dp"
+                android:drawableTop="@drawable/foot1"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:text="数据"
+                android:textColor="@android:color/white" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/tiao" />
+
+            <RadioButton
+                android:id="@+id/monitoring"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/checktwoone"
+                android:button="@null"
+                android:drawablePadding="-6dp"
+                android:drawableTop="@drawable/foot2"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:text="监控"
+                android:textColor="@android:color/white" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/tiao" />
+
+            <RadioButton
+                android:id="@+id/setData"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/checktwoone"
+                android:button="@null"
+                android:drawablePadding="-6dp"
+                android:drawableTop="@drawable/foot3"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:text="设置"
+                android:textColor="@android:color/white" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/tiao" />
+
+            <RadioButton
+                android:id="@+id/deviceControl"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/checktwoone"
+                android:button="@null"
+                android:drawablePadding="-6dp"
+                android:drawableTop="@drawable/foot4"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:text="控制"
+                android:textColor="@android:color/white" />
+            
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/tiao" />
+
+            <RadioButton
+                android:id="@+id/wea"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/checktwoone"
+                android:button="@null"
+                android:drawablePadding="-6dp"
+                android:drawableTop="@drawable/wea"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:text="天气"
+                android:textColor="@android:color/white" />
+
+          
+        </RadioGroup>
+    </LinearLayout>
+
+</RelativeLayout>
