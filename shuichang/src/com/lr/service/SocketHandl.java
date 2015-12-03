@@ -133,7 +133,8 @@ public class SocketHandl {
 							Fram fram = SavaFra.getFram(head2.GetDeviceID());// 保持对象的多样
 							hampfra.put(head2.GetDeviceID(), fram);
 							cApplicationontext.hashMapFram = hampfra;
-							Log.e("lll", head2.GetDeviceID());
+							System.out.println("FRAM_DATA  SocketHandl"+hampfra);
+							Log.e("FRAM_DATA lll", head2.GetDeviceID());
 							mainActivity.state(hashMap, "3");// 同样通接口回调，发广播
 						}
 

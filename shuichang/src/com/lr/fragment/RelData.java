@@ -79,6 +79,7 @@ public class RelData extends Fragment {
 				DataALL dataALL = list.get(i);
 				deviceID = dataALL.getDeviceID();
 				Fram fram = SavaFra.getFram(deviceID);
+				
 				String string = sharedPreferences.getString(deviceID, "无");
 				if (string.equals("无")) {
 					continue;
@@ -285,7 +286,8 @@ public class RelData extends Fragment {
 									+ "|" + fram.getFengSu14() + "|"
 									+ fram.getFengXiang15() + "|"
 									+ fram.getYe16() + "|" + fram.getDQW17()
-									+ "|" + fram.getDQS18());
+									+ "|" + fram.getDQS18()+ "|" + fram.getLat19()
+									+ "|" + fram.getLgt20()+ "|" + fram.getSpd21());
 					edit.commit();// 假如本地种便于下次取值
 					datatime.setVisibility(View.VISIBLE);
 					float o1 = fram.getO1();

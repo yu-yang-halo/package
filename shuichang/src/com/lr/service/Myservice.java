@@ -183,6 +183,7 @@ public class Myservice extends Service {
 							Fram fram = SavaFra.getFram(head2.GetDeviceID());// 保持对象的多样
 							hampfra.put(head2.GetDeviceID(), fram);
 							cApplicationontext.hashMapFram = hampfra;
+							System.out.println("FRAM_DATA  MYService"+hampfra);
 							if (myinterface != null) {
 								myinterface.state(hashMap, "3", null);// 同样通接口回调，发广播
 								String d = Utility.getHexString((Arrays

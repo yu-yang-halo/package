@@ -22,6 +22,9 @@ public class Fram {
 	private float DQS18;// 大气湿度
 	
 	private float lat19;// 纬度
+	private float lgt20;// 经度
+	private float spd21;// 速度
+	
 	public float getLat19() {
 		return lat19;
 	}
@@ -46,8 +49,7 @@ public class Fram {
 		this.spd21 = spd21;
 	}
 
-	private float lgt20;// 经度
-	private float spd21;// 速度
+
 
 	public float getY7() {
 		return Y7;
