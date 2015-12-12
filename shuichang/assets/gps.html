@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <style type="text/css">
+            body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+            </style>
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=wlWpdHWaqzdYWHNsRgYM3mjt"></script>
+        <title>设置点的新图标</title>
+    </head>
+    <body>
+        <div id="allmap"></div>
+    </body>
+</html>
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");
+    initialMap();
+    
+    
+    function initialMap(){
+        
+        var top_left_control = new BMap.ScaleControl({anchor: BMAP_ANCHOR_TOP_LEFT});
+        var top_left_navigation = new BMap.NavigationControl();
+        map.addControl(top_left_control);
+        map.addControl(top_left_navigation);
+        var point = new BMap.Point(116.331398,39.897445);
+        map.centerAndZoom(point,13);
+    }
+    
+    
+    function addMarkerLgtLat(ptsArr){
+       if(ptsArr==undefined&&ptsArr.length!=2){
+          return;
+       }
+       map.clearOverlays();
+       var pt = new BMap.Point(ptsArr[0],ptsArr[1]);
+       var marker = new BMap.Marker(pt);  // 创建标注
+       map.setCenter(pt);
+       map.addOverlay(marker);
+    }
+    </script>
