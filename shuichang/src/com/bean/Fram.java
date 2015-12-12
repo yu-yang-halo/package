@@ -21,23 +21,23 @@ public class Fram {
 	private float DQW17;// 大气温度
 	private float DQS18;// 大气湿度
 	
-	private float lat19;// 纬度
-	private float lgt20;// 经度
+	private double lat19;// 纬度
+	private double lgt20;// 经度
 	private float spd21;// 速度
 	
-	public float getLat19() {
+	public double getLat19() {
 		return lat19;
 	}
 
-	public void setLat19(float lat19) {
+	public void setLat19(double lat19) {
 		this.lat19 = lat19;
 	}
 
-	public float getLgt20() {
+	public double getLgt20() {
 		return lgt20;
 	}
 
-	public void setLgt20(float lgt20) {
+	public void setLgt20(double lgt20) {
 		this.lgt20 = lgt20;
 	}
 

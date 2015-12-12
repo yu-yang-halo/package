@@ -35,7 +35,7 @@ import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 import com.app.MyApplication;
-import com.example.shuichang.R;
+import com.example.huoyuyunshu.R;
 import com.hikvision.vmsnetsdk.LineInfo;
 import com.hikvision.vmsnetsdk.RealPlayURL;
 import com.hikvision.vmsnetsdk.ServInfo;

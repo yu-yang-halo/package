@@ -1,6 +1,6 @@
 package com.lr.fragment;
 
-import com.example.shuichang.R;
+import com.example.huoyuyunshu.R;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;

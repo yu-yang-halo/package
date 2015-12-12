@@ -106,8 +106,7 @@ public class Utility {
 	protected static int toDigit(char ch, int index) {
 		int digit = Character.digit(ch, 16);
 		if (digit == -1) {
-			throw new RuntimeException("Illegal hexadecimal character " + ch
-					+ " at index " + index);
+			throw new RuntimeException("Illegal hexadecimal character " + ch + " at index " + index);
 		}
 		return digit;
 	}
@@ -124,11 +123,9 @@ public class Utility {
 
 	// /2字节转1个字节
 	public static byte uniteBytes(byte src0, byte src1) {
-		byte _b0 = Byte.decode("0x" + new String(new byte[] { src0 }))
-				.byteValue();
+		byte _b0 = Byte.decode("0x" + new String(new byte[] { src0 })).byteValue();
 		_b0 = (byte) (_b0 << 4);
-		byte _b1 = Byte.decode("0x" + new String(new byte[] { src1 }))
-				.byteValue();
+		byte _b1 = Byte.decode("0x" + new String(new byte[] { src1 })).byteValue();
 		byte ret = (byte) (_b0 | _b1);
 		return ret;
 	}
@@ -154,8 +151,23 @@ public class Utility {
 		accum = accum | (b[0] & 0xff) << 24;
 		return Float.intBitsToFloat(accum);
 	}
+/*
+ 
+ 
+ accum = accum | (b[3] & 0xff) << 0;
+		accum = accum | (b[2] & 0xff) << 8;
+		accum = accum | (b[1] & 0xff) << 16;
+		accum = accum | (b[0] & 0xff) << 24;
+ */
+
 
 	public static float HexString2Float(String string) {
+		byte[] bytes = HexString2Bytes(string);
+
+		return getFloat(bytes);
+
+	}
+	public static double HexString2Double(String string) {
 		byte[] bytes = HexString2Bytes(string);
 
 		return getFloat(bytes);

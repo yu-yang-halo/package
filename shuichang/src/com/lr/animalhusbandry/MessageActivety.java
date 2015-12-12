@@ -5,7 +5,7 @@ import java.util.List;
 import com.DB.DBUtils;
 import com.DB.Message;
 import com.app.MyApplication;
-import com.example.shuichang.R;
+import com.example.huoyuyunshu.R;
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;

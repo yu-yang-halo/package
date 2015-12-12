@@ -65,7 +65,8 @@ public class ToSoA {// 协议类
 		String head = message.substring(0, 2);
 
 		float number = Utility.HexString2Float(message.substring(2, 10));
-		Log.e("head", head + "|" + number);
+		
+		Log.e("head", head + "|" + number +" message "+message);
 		if (head.equals("01")) {// 溶氧
 			// 光照
 			fram.setO1(number);
@@ -113,9 +114,9 @@ public class ToSoA {// 协议类
 		} else if (head.equals("12")) {
 			fram.setDQS18(number);// 大气湿度
 		} else if (head.equals("13")) {
-			fram.setLat19(number);// 纬度
+			fram.setLat19(Utility.HexString2Double(message.substring(2, 10)));// 纬度
 		} else if (head.equals("14")) {
-			fram.setLgt20(number);// 经度
+			fram.setLgt20(Utility.HexString2Double(message.substring(2, 10)));// 经度
 		}else if (head.equals("15")) {
 			fram.setSpd21(number);// 速度
 		}

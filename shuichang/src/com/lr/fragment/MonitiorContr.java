@@ -2,7 +2,7 @@ package com.lr.fragment;
 
 import java.util.ArrayList;
 
-import com.example.shuichang.R;
+import com.example.huoyuyunshu.R;
 
 import com.lr.agriculture.video.VideoView;
 import com.lr.javaBean.DataALL;

@@ -12,7 +12,7 @@ import java.util.Set;
 import com.app.MyApplication;
 import com.bean.Fram;
 import com.bean.SavaFra;
-import com.example.shuichang.R;
+import com.example.huoyuyunshu.R;
 import com.lr.adapter.FragmentViewPagerAdapter;
 import com.lr.fragment.DataFragement;
 import com.lr.fragment.DeviConFragment;

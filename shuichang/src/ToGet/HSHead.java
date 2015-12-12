@@ -20,7 +20,7 @@ public class HSHead implements IHSHead {
 
 		version = bytes[3];
 		switch (bytes[4] * 256 + bytes[5]) {
-		case 1:
+		case 8://设备类型 1改为8
 			deviceType = DeviceType.Water;
 			break;
 		case 2:
@@ -73,7 +73,8 @@ public class HSHead implements IHSHead {
 		case Water:
 			head[4] = 0x00;
 			// head[5] = 0x01;
-			head[5] = (byte) 0xFE;
+			//head[5] = (byte) 0xFE;
+			head[5]=0x08;
 			break;
 		case Plant:
 			head[4] = 0x00;
@@ -99,6 +100,8 @@ public class HSHead implements IHSHead {
 		this.serialNo = serialNo;
 		System.arraycopy(serialNo, 0, head, 10, 8);
 		System.arraycopy(Utility.shortToByteArray(orderWord), 0, head, 18, 2);
+		byte[] a=Utility.shortToByteArray(orderWord);
+		System.out.println("orderWord "+orderWord+ "  "+ a[0] +" : "+a[1]);
 		head[20] = operateSign;
 	}
 

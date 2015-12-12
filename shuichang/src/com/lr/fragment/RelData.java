@@ -6,7 +6,7 @@ import java.util.HashMap;
 import com.app.MyApplication;
 import com.bean.Fram;
 import com.bean.SavaFra;
-import com.example.shuichang.R;
+import com.example.huoyuyunshu.R;
 import com.jauker.widget.BadgeView;
 import com.lr.animalhusbandry.MessageActivety;
 import com.lr.javaBean.DataALL;
@@ -33,6 +33,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import map.GpsMapAcitivty;
 
 /**
  * 
@@ -149,6 +150,9 @@ public class RelData extends Fragment {
 		private float tem;
 		private float t6;
 		private float y7;
+		private double latitude;
+		private double longitude;
+		private float speed;
 
 		@Override
 		public int getCount() {
@@ -293,6 +297,12 @@ public class RelData extends Fragment {
 					float o1 = fram.getO1();
 					String time = fram.getTime();
 					datatime.setText(time);
+					double lat19=fram.getLat19();
+					double lgt20=fram.getLgt20();
+					float spd21=fram.getSpd21();
+					
+					
+					
 					float max = 15;
 					setvalue(max, o1, "溶氧", Color.RED, R.drawable.red);
 					float O2 = fram.getO2o();
@@ -329,6 +339,7 @@ public class RelData extends Fragment {
 							R.drawable.tou);
 					setvalue(120, fram.getDQS18(), "大气湿度", Color.RED,
 							R.drawable.red);
+					setvalue(lat19, lgt20, "经度/纬度");
 
 				} else {
 					String string = sharedPreferences.getString(
@@ -453,7 +464,21 @@ public class RelData extends Fragment {
 							// TODO: handle exception
 							dQw = 0;
 						}
+						try {
+							latitude = Float.parseFloat(c[19]);
+						} catch (Exception e) {
+							// TODO: handle exception
+							latitude = 0;
+						}
+						try {
+							longitude = Float.parseFloat(c[20]);
+						} catch (Exception e) {
+							// TODO: handle exception
+							longitude = 0;
+						}
 
+
+						
 						String time = c[6];
 
 						datatime.setVisibility(View.VISIBLE);
@@ -479,6 +504,7 @@ public class RelData extends Fragment {
 						setvalue(15, ye, "叶绿素", Color.YELLOW, R.drawable.tou);
 						setvalue(50, dQS, "大气温度", Color.YELLOW, R.drawable.tou);
 						setvalue(120, dQw, "大气湿度", Color.RED, R.drawable.red);
+						setvalue(latitude, longitude, "经度/纬度");
 
 					}
 				}
@@ -526,6 +552,39 @@ public class RelData extends Fragment {
 			});
 			return view;
 		}
+		
+		//加入经度纬度速度
+		public void setvalue(double lat19, double lgt20,String text) {
+			if (lat19==0 || lgt20==0) {
+				return;
+
+			}
+			final View gpsView = getActivity().getLayoutInflater().from(getActivity())
+					.inflate(R.layout.gpsdata, null);
+			
+			TextView name = (TextView) gpsView.findViewById(R.id.tv);
+			TextView latText = (TextView) gpsView.findViewById(R.id.lat);
+			TextView lgtText = (TextView) gpsView.findViewById(R.id.lgt);
+			
+			name.setText(text);
+			String latStr=String.format("%.6f", lat19);
+			String lgtStr=String.format("%.6f", lgt20);
+			latText.setText(latStr);
+			lgtText.setText(lgtStr);
+			gpsView.setTag(lgtStr+","+latStr);
+			ll.addView(gpsView);
+			gpsView.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					Intent intent=new Intent(RelData.this.getActivity(),GpsMapAcitivty.class);
+					String gpsDataArr=(String) gpsView.getTag();
+					intent.putExtra("gpsData", gpsDataArr);
+					RelData.this.getActivity().startActivity(intent);
+				}
+			});
+
+	}
 
 		// 根据不同的刻度画线 此处最大值以后添加暂时为个人意见
 		public void setvalue(double max, float value1, String text, int color,
